@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ✅ Google Identity & API scripts -->
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script src="https://apis.google.com/js/api.js" async defer></script>
+
+  <!-- Load Config before Calendar -->
+<script src="./js/config.js" defer></script>
+<script src="./js/googleCalendar.js" defer></script>
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/script.js" defer></script>
+    <title>Todo App</title>
+  </head>
+  <body>
+
+    <div id="g_id_onload"
+     data-client_id="YOUR_CLIENT_ID"
+     data-callback="handleCredentialResponse">
+    </div>
+
+    <section class="todo">
+      <h2>To-Do List</h2>
+     <div class="input">
+           <input type="text" class="input-field" id="todoInput" placeholder="Add a new Task" />
+          <input type="datetime-local" id="dueDate" class="date-picker" />
+           <button class="btn">Add</button>
+      </div>
+
+
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search tasks..." class="search-input" />
+        <button id="clearSearch" class="clear-btn">&times;</button>
+      </div>
+
+      <!-- Controls Section -->
+      <div class="controls">
+        <!-- FILTER BUTTONS -->
+        <div class="filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="active">Active</button>
+          <button class="filter" data-filter="completed">Completed</button>
+
+          <!-- SORT BUTTON -->
+          <button id="sortButton" class="sort-btn">Sort A-Z</button>
+
+          <!-- DARK MODE TOGGLE -->
+            <div class="theme-toggle">
+               <button id="themeSwitcher">Dark Mode</button>
+            </div>
+
+        </div>
+      </div>
+
+      <!-- Task List -->
+      <ul class="scroll" id="todoList">
+        <!-- Tasks will be inserted here by JavaScript -->
+      </ul>
+
+      <!-- Counter Section -->
+      <div class="counter-section">
+        <hr class="counter" />
+        <div class="counter-container">
+          <p><span id="todoCount">0</span> items total</p>
+          <button id="deleteButton" class="delete-all-btn">Delete All</button>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <button id="auth-button">Sync with Google Calendar</button>
+
+    </footer>
+  </body>
+</html>
