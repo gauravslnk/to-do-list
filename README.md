@@ -2,6 +2,7 @@
 
 A clean and responsive To-Do List app built with **HTML, CSS, and JavaScript** — no frameworks or libraries. Easily manage your tasks with features like filtering, sorting, dark mode, and search highlighting. Simple yet powerful.
 
+🌐 **Live Demo → (https://to-do-list-taupe-psi-41.vercel.app/)**
 ---
 
 ## 🚀 Features
@@ -62,6 +63,14 @@ A clean and responsive To-Do List app built with **HTML, CSS, and JavaScript** �
 * HTML5
 * CSS3
 * JavaScript (Vanilla JS)
+
+---
+📦 Deployment
+This project is deployed and hosted on Vercel.
+
+🔗 Live App: (https://to-do-list-taupe-psi-41.vercel.app/)
+
+📂 Also available under the Deployments and About sections on GitHub.
 
 ---
 
